@@ -30,6 +30,7 @@ export class PromiseCompletionSource<T> {
         // When we reject the promise but the promise is not yet observed we get
         // a UnhandledPromiseRejectionWarning, by catching here we still preserve
         // the error (when .promise is observed) but prevent the warning
+        // tslint:disable-next-line:no-empty
         this.promise.catch(() => {})
     }
 }
